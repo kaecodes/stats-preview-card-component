@@ -38,12 +38,27 @@ body {
 
 .hero {
   width: 100%; 
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0; 
+  position: relative; 
 }
 
 .hero .mobile-hero {
+  display: block;
   width: 100%; 
+  height: 100%;
   border-radius: 1rem 1rem 0 0;
+}
+
+.overlay-mobile {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  height: 100%; 
+  width: 100%;
+  background-color: hsl(277, 94%, 24%);
+  opacity: 0.6;
+  border-radius: 1rem 1rem 0 0; 
+  overflow: hidden;
 }
 
 .desktop-hero {
@@ -101,3 +116,69 @@ body {
   font-size: 0.7rem; 
   margin-top: 0.4rem;
 }
+
+/* @media (min-width: 1440px) {
+  .main-container {
+    width: 70%;
+    height: 60%;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+
+  .card-container {
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem; 
+  }
+
+  .content {
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 2.5rem; 
+    gap: 3.5rem; 
+  }
+
+  .content .text {
+    text-align: left;
+  }
+
+  .content .text .heading {
+    font-size: 2rem; 
+  }
+
+  .stats {
+    width: 100%;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+  }
+
+  .hero .mobile-hero {
+    visibility: hidden;
+  }
+
+  .hero .desktop-hero {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--accent);
+  }
+  
+} */
